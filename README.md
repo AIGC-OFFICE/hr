@@ -35,7 +35,7 @@
 1. 克隆仓库：
 
    ```bash
-   git clone https://github.com/AIGC-OFFICE/HRs.git
+   git clone https://github.com/AIGC-OFFICE/hr.git
    ```
 
 2. 直接双击打开 `index.html` 即可在浏览器中预览。
