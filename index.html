@@ -32,6 +32,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style -->
     <style>
+        /* Prevent horizontal scrolling globally and improve touch behavior on mobile */
+        html, body {
+            overflow-x: hidden;
+            touch-action: pan-y;
+            -ms-touch-action: pan-y; /* for older IE */
+        }
+
         .glass-nav {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
