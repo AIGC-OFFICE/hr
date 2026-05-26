@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>义乌家政服务 - 开荒保洁 / 家电清洗 / 除甲醛 上门服务 | 洪瑞家政</title>
+    <meta name="description" content="义乌本地家政服务一站式平台：开荒保洁 3 元/㎡起、小时工 30 元/时起、家电深度清洗、甲醛检测治理。明码标价、岗前培训、上门服务。预约热线 153 5766 8957。">
+    <meta name="keywords" content="义乌家政,义乌开荒保洁,义乌家电清洗,义乌除甲醛,义乌小时工,义乌整理收纳,洪瑞家政">
+    <link rel="canonical" href="https://hongruilaowu.com/housekeeping/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="义乌家政服务 · 明码标价 · 上门服务 | 洪瑞家政">
+    <meta property="og:description" content="开荒保洁 3 元/㎡起 · 家电深度清洗 · 甲醛检测治理。本地团队，岗前培训，明码标价。">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:url" content="https://hongruilaowu.com/housekeeping/">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#3B82F6',
+                        accent: '#F59E0B',
+                        dark: '#111827',
+                        light: '#F3F4F6',
+                        ink: '#0B1220',
+                        cream: '#FAF7F2',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['"Noto Serif SC"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        html, body { overflow-x: hidden; }
+        html { scroll-padding-top: 88px; }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        .cream-bg { background-color: #FAF7F2; }
+        .ink-text { color: #0B1220; }
+
+        .price-num {
+            font-family: 'Noto Serif SC', Georgia, serif;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+        .price-unit { color: #6B7280; font-size: 0.85em; margin-left: 4px; }
+
+        .rule { height: 1px; background: linear-gradient(to right, transparent, #d1d5db, transparent); }
+
+        .tile { transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s; }
+        .tile:hover { transform: translateY(-6px); box-shadow: 0 30px 50px -20px rgba(30,64,175,.18); }
+
+        .tile-num {
+            font-family: 'Noto Serif SC', Georgia, serif;
+            font-weight: 900;
+            font-size: 5.5rem;
+            color: rgba(30,64,175,0.08);
+            line-height: 1;
+            position: absolute;
+            top: 1.2rem;
+            right: 1.4rem;
+            pointer-events: none;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "义乌市洪瑞劳务服务有限公司 · 洪瑞家政",
+      "image": "https://hongruilaowu.com/assets/images/logo.svg",
+      "url": "https://hongruilaowu.com/housekeeping/",
+      "telephone": "+86-153-5766-8957",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "苏溪镇长府路 66 号 706 室",
+        "addressLocality": "义乌市",
+        "addressRegion": "浙江省",
+        "addressCountry": "CN"
+      },
+      "areaServed": { "@type": "City", "name": "义乌" },
+      "description": "义乌本地家政服务：开荒保洁、家电深度清洗、甲醛检测治理、整理收纳、沙发清洗。明码标价、岗前培训、上门服务。",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "priceRange": "¥¥",
+      "foundingDate": "2020"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "家政服务",
+      "provider": { "@type": "LocalBusiness", "name": "义乌市洪瑞劳务服务有限公司" },
+      "areaServed": "义乌",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "家政服务目录",
+        "itemListElement": [
+          { "@type": "Offer", "name": "开荒保洁", "priceCurrency": "CNY", "price": "3", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "3", "priceCurrency": "CNY", "unitText": "平方米" } },
+          { "@type": "Offer", "name": "小时工", "priceCurrency": "CNY", "price": "30", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "30", "priceCurrency": "CNY", "unitText": "小时" } },
+          { "@type": "Offer", "name": "深度清洁", "priceCurrency": "CNY", "price": "5", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "5", "priceCurrency": "CNY", "unitText": "平方米" } },
+          { "@type": "Offer", "name": "整理收纳", "priceCurrency": "CNY", "price": "60", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "60", "priceCurrency": "CNY", "unitText": "小时" } },
+          { "@type": "Offer", "name": "甲醛检测", "priceCurrency": "CNY", "price": "200" },
+          { "@type": "Offer", "name": "实木沙发清洗", "priceCurrency": "CNY", "price": "120", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "120", "priceCurrency": "CNY", "unitText": "座" } }
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://hongruilaowu.com/" },
+        { "@type": "ListItem", "position": 2, "name": "家政服务", "item": "https://hongruilaowu.com/housekeeping/" }
+      ]
+    }
+    </script>
+</head>
+
+<body class="text-gray-800 antialiased font-sans cream-bg">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="flex-shrink-0 flex items-center">
+                    <img class="h-10 w-auto" src="../assets/images/logo.svg" alt="洪瑞劳务">
+                </a>
+                <div class="hidden md:flex space-x-1 items-center">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-full transition-all duration-300 font-medium">首页</a>
+                    <a href="../index.html#about" class="text-gray-700 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-full transition-all duration-300 font-medium">关于我们</a>
+                    <a href="../index.html#services" class="text-gray-700 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-full transition-all duration-300 font-medium">核心业务</a>
+                    <a href="./index.html" class="text-primary bg-blue-50 px-4 py-2 rounded-full font-semibold">家政服务</a>
+                    <div class="pl-4">
+                        <a href="#contact" class="px-6 py-2.5 rounded-full bg-primary text-white font-medium hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 flex items-center gap-2">
+                            <span>预约上门</span>
+                            <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">首页</a>
+                <a href="../index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">关于我们</a>
+                <a href="../index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">核心业务</a>
+                <a href="./index.html" class="block px-3 py-2 rounded-md text-base font-semibold text-primary bg-blue-50">家政服务</a>
+                <a href="./cleaning.html" class="block px-6 py-1.5 text-sm text-gray-600 hover:text-primary">— 日常 / 深度保洁</a>
+                <a href="./appliance.html" class="block px-6 py-1.5 text-sm text-gray-600 hover:text-primary">— 家电深度清洗</a>
+                <a href="./care.html" class="block px-6 py-1.5 text-sm text-gray-600 hover:text-primary">— 家居 / 软装养护</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-blue-50">预约上门</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-24 pb-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-500" aria-label="面包屑">
+        <a href="../index.html" class="hover:text-primary">首页</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-700 font-medium">家政服务</span>
+    </div>
+
+    <section class="relative pt-6 pb-16 md:pt-10 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+                <div class="lg:col-span-7" data-aos="fade-up">
+                    <span class="inline-block px-3 py-1 rounded-full bg-amber-50 text-accent text-xs font-semibold tracking-widest uppercase mb-5">YIWU · HOUSEKEEPING</span>
+                    <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-black ink-text leading-[1.05] mb-6">
+                        义乌家政服务<br>
+                        <span class="text-primary">明码标价</span><span class="text-gray-400"> · </span><span class="text-accent">上门即做</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed">
+                        洪瑞家政自 2020 年深耕义乌本地市场，以正规劳务派遣公司的合规底盘 + 自主岗前培训体系，
+                        为家庭与商户提供保洁、家电清洗、除甲醛等一站式上门服务。
+                    </p>
+                </div>
+                <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
+                    <div class="bg-white rounded-2xl shadow-xl p-7 border border-gray-100">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <span class="text-sm text-gray-500">本周可预约 · 义乌全城</span>
+                        </div>
+                        <div class="text-gray-500 text-sm mb-1">预约热线</div>
+                        <a href="tel:15357668957" class="block font-display text-3xl md:text-4xl font-black text-primary tracking-tight mb-4 hover:text-blue-700 transition">153 5766 8957</a>
+                        <div class="rule mb-4"></div>
+                        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-600">
+                            <span class="inline-flex items-center gap-1.5"><i class="fas fa-check-circle text-green-600"></i> 营业执照齐全</span>
+                            <span class="inline-flex items-center gap-1.5"><i class="fas fa-check-circle text-green-600"></i> 岗前培训持证</span>
+                            <span class="inline-flex items-center gap-1.5"><i class="fas fa-check-circle text-green-600"></i> 明码标价</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+                <div>
+                    <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">CATEGORIES · 三大板块</div>
+                    <h2 class="font-display text-3xl md:text-4xl font-black ink-text">按需要选板块，逐项明码标价</h2>
+                </div>
+                <a href="#contact" class="hidden md:inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+                    <span>看不到要的服务？直接来电</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <a href="./yiwu-kaihuang-baojie.html" class="block mb-8 group" data-aos="fade-up">
+                <div class="relative overflow-hidden bg-gradient-to-r from-primary to-blue-700 rounded-2xl p-6 md:p-8 text-white shadow-lg hover:shadow-2xl transition-all">
+                    <div class="absolute top-0 right-0 px-3 py-1 bg-accent text-white text-xs font-bold tracking-wider">FEATURED · 主推专题</div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <div class="text-xs tracking-[0.3em] text-blue-200 font-semibold mb-2">YIWU KAIHUANG · 重点推荐</div>
+                            <h3 class="font-display text-2xl md:text-3xl font-black mb-2">义乌开荒保洁 · 6 大场景 / 8 步流程 / 透明报价</h3>
+                            <p class="text-blue-100 text-sm md:text-base">新房 / 出租房 / 店铺 / 餐厅 / 办公室 / 厂房 —— 3 元/㎡起，明码标价，看完报价再下单。</p>
+                        </div>
+                        <span class="flex-shrink-0 inline-flex items-center gap-2 bg-white text-primary font-semibold px-5 py-3 rounded-full group-hover:gap-3 transition-all">
+                            进入专页 <i class="fas fa-arrow-right text-sm"></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <a href="./cleaning.html" class="tile relative block bg-white rounded-2xl p-8 border border-gray-100 shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="50">
+                    <span class="tile-num">01</span>
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+                        <i class="fas fa-broom text-xl"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-black ink-text mb-3">日常 / 深度保洁</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">开荒保洁、小时工、深度清洁、整理收纳。家政四大基础项，覆盖装修后入住到日常维护全周期。</p>
+                    <ul class="text-sm text-gray-500 space-y-1.5 mb-6">
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>开荒保洁</span><span class="text-ink font-semibold">¥3 / ㎡ 起</span></li>
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>小时工</span><span class="text-ink font-semibold">¥30 / 时 起</span></li>
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>深度清洁</span><span class="text-ink font-semibold">¥5 / ㎡ 起</span></li>
+                        <li class="flex justify-between"><span>整理收纳</span><span class="text-ink font-semibold">¥60 / 时 起</span></li>
+                    </ul>
+                    <span class="inline-flex items-center gap-2 text-primary font-semibold">查看详情 <i class="fas fa-arrow-right text-sm"></i></span>
+                </a>
+
+                <a href="./appliance.html" class="tile relative block bg-white rounded-2xl p-8 border border-gray-100 shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="120">
+                    <span class="tile-num">02</span>
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-accent flex items-center justify-center mb-6">
+                        <i class="fas fa-fan text-xl"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-black ink-text mb-3">家电深度清洗</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">油烟机、空调、洗衣机、热水器、冰箱、地暖六大品类上门清洗。专业拆装、深度除菌、性能恢复。</p>
+                    <ul class="text-sm text-gray-500 space-y-1.5 mb-6">
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>油烟机（单 / 双轮）</span><span class="text-ink font-semibold">分项报价</span></li>
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>空调（柜 / 挂机）</span><span class="text-ink font-semibold">分项报价</span></li>
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>洗衣机（滚筒免拆 / 波轮）</span><span class="text-ink font-semibold">分项报价</span></li>
+                        <li class="flex justify-between"><span>热水器 / 冰箱 / 地暖</span><span class="text-ink font-semibold">上门估价</span></li>
+                    </ul>
+                    <span class="inline-flex items-center gap-2 text-primary font-semibold">查看详情 <i class="fas fa-arrow-right text-sm"></i></span>
+                </a>
+
+                <a href="./care.html" class="tile relative block bg-white rounded-2xl p-8 border border-gray-100 shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="190">
+                    <span class="tile-num">03</span>
+                    <div class="w-12 h-12 rounded-xl bg-green-50 text-green-700 flex items-center justify-center mb-6">
+                        <i class="fas fa-leaf text-xl"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-black ink-text mb-3">家居 / 软装养护</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">甲醛检测治理、沙发 / 窗帘 / 地毯清洗、地板保养、瓷砖美缝。让新房入住放心，让旧房焕然如新。</p>
+                    <ul class="text-sm text-gray-500 space-y-1.5 mb-6">
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>甲醛检测</span><span class="text-ink font-semibold">¥200 起</span></li>
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>实木沙发清洗</span><span class="text-ink font-semibold">¥120 / 座</span></li>
+                        <li class="flex justify-between border-b border-dashed border-gray-200 pb-1.5"><span>地板清洗</span><span class="text-ink font-semibold">¥6 / ㎡ 起</span></li>
+                        <li class="flex justify-between"><span>瓷砖美缝 / 除甲醛治理</span><span class="text-ink font-semibold">上门估价</span></li>
+                    </ul>
+                    <span class="inline-flex items-center gap-2 text-primary font-semibold">查看详情 <i class="fas fa-arrow-right text-sm"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                <div class="md:col-span-4">
+                    <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">WHY US</div>
+                    <h2 class="font-display text-3xl md:text-4xl font-black ink-text leading-tight">为什么选<br>洪瑞家政</h2>
+                    <p class="text-gray-500 mt-4 leading-relaxed">六年合规劳务公司的人员管控能力，外加面向家庭客户的服务流程，让陌生人上门也安心。</p>
+                </div>
+                <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-xl bg-gray-50 hover:bg-blue-50/40 transition" data-aos="fade-up">
+                        <div class="text-3xl text-primary mb-3"><i class="fas fa-building-circle-check"></i></div>
+                        <h3 class="font-bold text-lg ink-text mb-1">2020 年正规注册</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">义乌市洪瑞劳务服务有限公司，营业执照、劳务派遣资质齐全，受《劳动合同法》保护。</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-gray-50 hover:bg-amber-50/40 transition" data-aos="fade-up" data-aos-delay="80">
+                        <div class="text-3xl text-accent mb-3"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3 class="font-bold text-lg ink-text mb-1">自主岗前培训</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">保洁员、收纳师、家电清洗工统一参加岗位技能培训课程，考核合格再派单。</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-gray-50 hover:bg-green-50/40 transition" data-aos="fade-up" data-aos-delay="160">
+                        <div class="text-3xl text-green-700 mb-3"><i class="fas fa-tag"></i></div>
+                        <h3 class="font-bold text-lg ink-text mb-1">明码标价</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">每个项目均按面积 / 小时 / 件数清晰报价，上门前给定预估，过程不加价。</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-gray-50 hover:bg-purple-50/40 transition" data-aos="fade-up" data-aos-delay="240">
+                        <div class="text-3xl text-purple-700 mb-3"><i class="fas fa-location-dot"></i></div>
+                        <h3 class="font-bold text-lg ink-text mb-1">义乌本地团队</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">实体办公地点位于苏溪镇长府路 66 号 706 室，上门快、响应快、可追溯。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">BOOK A VISIT</div>
+                    <h2 class="font-display text-3xl md:text-5xl font-black ink-text mb-6">预约上门 / 业务咨询</h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">告诉我们房屋面积、需要的项目和期望上门时间，1 小时内回电报价并锁定档期。</p>
+
+                    <div class="space-y-5">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white p-3 rounded-full shadow-md text-primary">
+                                <i class="fas fa-phone-alt text-xl w-6 h-6 flex items-center justify-center"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-base font-bold ink-text">预约热线（统一对外）</h4>
+                                <a href="tel:15357668957" class="font-display text-2xl font-black text-primary hover:text-blue-700 transition">153 5766 8957</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white p-3 rounded-full shadow-md text-primary">
+                                <i class="fas fa-map-marker-alt text-xl w-6 h-6 flex items-center justify-center"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-base font-bold ink-text">公司地址</h4>
+                                <p class="text-gray-600">浙江省义乌市苏溪镇长府路 66 号 706 室</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white p-3 rounded-full shadow-md text-primary">
+                                <i class="fas fa-clock text-xl w-6 h-6 flex items-center justify-center"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-base font-bold ink-text">服务时间</h4>
+                                <p class="text-gray-600">周一至周日 08:00 – 20:00（节假日不休）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl" data-aos="fade-left">
+                    <div class="text-center">
+                        <h3 class="font-display text-2xl font-black ink-text mb-2">扫码加微信</h3>
+                        <p class="text-gray-500 mb-6 text-sm">业务负责人 1 对 1，发户型图秒回报价</p>
+                        <div class="inline-block p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <img src="../assets/images/qrcode.png" alt="洪瑞家政业务微信二维码" class="w-48 h-48 object-contain">
+                            <p class="mt-2 text-sm text-gray-500 font-medium">扫码添加微信</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img class="h-11 w-auto brightness-0 invert" src="../assets/images/logo.svg" alt="洪瑞劳务">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        义乌市洪瑞劳务服务有限公司，2020 年正规注册。劳务派遣 + 家政服务双业务条线，合规、专业、可追溯。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-gray-200">家政服务</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="./cleaning.html" class="hover:text-white transition">日常 / 深度保洁</a></li>
+                        <li><a href="./appliance.html" class="hover:text-white transition">家电深度清洗</a></li>
+                        <li><a href="./care.html" class="hover:text-white transition">家居 / 软装养护</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">预约上门</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-gray-200">联系方式</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> 153 5766 8957</li>
+                        <li><i class="fas fa-envelope mr-2"></i> hongrui@126.com</li>
+                        <li class="leading-relaxed"><i class="fas fa-map-marker-alt mr-2"></i> 义乌苏溪镇长府路 66 号 706 室</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2024 义乌市洪瑞劳务服务有限公司 · <a href="../index.html" class="hover:text-white">返回首页</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

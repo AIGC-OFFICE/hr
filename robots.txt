@@ -1,0 +1,7 @@
+# robots.txt for 义乌市洪瑞劳务服务有限公司
+# Replace https://hongruilaowu.com/ with the production domain before launch.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://hongruilaowu.com/sitemap.xml
