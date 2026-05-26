@@ -50,18 +50,18 @@
       "@type": "Service",
       "name": "义乌家电深度清洗服务",
       "serviceType": ["油烟机清洗", "空调清洗", "洗衣机清洗", "热水器清洗", "冰箱清洗", "地暖清洗"],
-      "provider": { "@type": "LocalBusiness", "name": "义乌市洪瑞劳务服务有限公司", "telephone": "+86-153-5766-8957", "address": { "@type": "PostalAddress", "streetAddress": "苏溪镇长府路 66 号 706 室", "addressLocality": "义乌市", "addressRegion": "浙江省", "addressCountry": "CN" } },
+      "provider": { "@type": "LocalBusiness", "name": "义乌市洪瑞劳务服务有限公司", "telephone": "+86-153-5766-8957", "address": { "@type": "PostalAddress", "streetAddress": "苏溪镇长府路 78 号", "addressLocality": "义乌市", "addressRegion": "浙江省", "addressCountry": "CN" } },
       "areaServed": { "@type": "City", "name": "义乌" },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "家电清洗服务目录",
         "itemListElement": [
-          { "@type": "Offer", "name": "油烟机清洗（单轮 / 双轮）", "description": "拆洗油网、风轮、机身，去除油垢恢复风量。", "priceCurrency": "CNY" },
-          { "@type": "Offer", "name": "空调清洗（柜机 / 挂机）", "description": "拆洗过滤网、深度清洗蒸发器、除菌消毒。", "priceCurrency": "CNY" },
-          { "@type": "Offer", "name": "洗衣机清洗（滚筒免拆 / 波轮）", "description": "清除内桶夹层细菌、霉斑，恢复洁净。", "priceCurrency": "CNY" },
-          { "@type": "Offer", "name": "热水器清洗（含太阳能 / 空气能）", "description": "清除水垢，提升加热效率，延长寿命。", "priceCurrency": "CNY" },
-          { "@type": "Offer", "name": "冰箱清洗", "description": "全内胆深度清洁，去除异味与细菌。", "priceCurrency": "CNY" },
-          { "@type": "Offer", "name": "地暖清洗", "description": "脉冲清洗地暖管路，恢复供热效率。", "priceCurrency": "CNY" }
+          { "@type": "Offer", "name": "油烟机清洗（单轮 / 双轮）", "description": "拆洗油网、风轮、机身，去除油垢恢复风量。单轮 150 元起 / 双轮 200 元起。", "priceCurrency": "CNY", "price": "150", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "CNY", "minPrice": "150", "valueAddedTaxIncluded": true } },
+          { "@type": "Offer", "name": "空调清洗（柜机 / 挂机）", "description": "拆洗过滤网、深度清洗蒸发器、除菌消毒。挂机 100 元起 / 柜机 150 元起。", "priceCurrency": "CNY", "price": "100", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "CNY", "minPrice": "100", "valueAddedTaxIncluded": true } },
+          { "@type": "Offer", "name": "洗衣机清洗（滚筒免拆 / 波轮）", "description": "清除内桶夹层细菌、霉斑，恢复洁净。滚筒免拆 150 元起 / 波轮 200 元起。", "priceCurrency": "CNY", "price": "150", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "CNY", "minPrice": "150", "valueAddedTaxIncluded": true } },
+          { "@type": "Offer", "name": "热水器清洗（含太阳能 / 空气能）", "description": "清除水垢，提升加热效率，延长寿命。储水式 150 元起 / 太阳能 20 元每根起 / 空气能 3 元每升起。", "priceCurrency": "CNY", "price": "150", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "CNY", "minPrice": "20", "valueAddedTaxIncluded": true } },
+          { "@type": "Offer", "name": "冰箱清洗", "description": "全内胆深度清洁，去除异味与细菌。普通冰箱 80 元起 / 对开门 180 元起 / 十字门议价。", "priceCurrency": "CNY", "price": "80", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "CNY", "minPrice": "80", "valueAddedTaxIncluded": true } },
+          { "@type": "Offer", "name": "地暖清洗", "description": "脉冲清洗地暖管路，恢复供热效率。按回路（组）50 元起。", "priceCurrency": "CNY", "price": "50", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "CNY", "minPrice": "50", "valueAddedTaxIncluded": true } }
         ]
       }
     }
@@ -163,37 +163,37 @@
                 <a href="#hood" class="bento bg-white rounded-2xl p-7 border border-gray-100 shadow-sm block">
                     <div class="glyph w-14 h-14 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-5"><i class="fas fa-wind text-2xl"></i></div>
                     <h3 class="font-display text-2xl font-black ink-text mb-2">油烟机</h3>
-                    <div class="flex gap-2 mb-4"><span class="opt-pill">单轮</span><span class="opt-pill">双轮</span></div>
+                    <div class="flex gap-2 mb-4 flex-wrap"><span class="opt-pill">单轮&nbsp;<strong class="text-primary">¥150 起</strong></span><span class="opt-pill">双轮&nbsp;<strong class="text-primary">¥200 起</strong></span></div>
                     <p class="text-sm text-gray-600 leading-relaxed">拆洗油网、风轮、机身。去油垢恢复风量。</p>
                 </a>
                 <a href="#ac" class="bento bg-white rounded-2xl p-7 border border-gray-100 shadow-sm block">
                     <div class="glyph w-14 h-14 rounded-xl bg-cyan-50 text-cyan-700 flex items-center justify-center mb-5"><i class="fas fa-snowflake text-2xl"></i></div>
                     <h3 class="font-display text-2xl font-black ink-text mb-2">空调</h3>
-                    <div class="flex gap-2 mb-4"><span class="opt-pill">柜机</span><span class="opt-pill">挂机</span></div>
+                    <div class="flex gap-2 mb-4 flex-wrap"><span class="opt-pill">挂机&nbsp;<strong class="text-primary">¥100 起</strong></span><span class="opt-pill">柜机&nbsp;<strong class="text-primary">¥150 起</strong></span></div>
                     <p class="text-sm text-gray-600 leading-relaxed">蒸发器深洗，除菌除霉，告别异味。</p>
                 </a>
                 <a href="#washer" class="bento bg-white rounded-2xl p-7 border border-gray-100 shadow-sm block">
                     <div class="glyph w-14 h-14 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5"><i class="fas fa-soap text-2xl"></i></div>
                     <h3 class="font-display text-2xl font-black ink-text mb-2">洗衣机</h3>
-                    <div class="flex gap-2 mb-4"><span class="opt-pill">滚筒免拆</span><span class="opt-pill">波轮</span></div>
+                    <div class="flex gap-2 mb-4 flex-wrap"><span class="opt-pill">滚筒免拆&nbsp;<strong class="text-primary">¥150 起</strong></span><span class="opt-pill">波轮&nbsp;<strong class="text-primary">¥200 起</strong></span></div>
                     <p class="text-sm text-gray-600 leading-relaxed">清除内桶夹层霉斑细菌，免拆即洗。</p>
                 </a>
                 <a href="#heater" class="bento bg-white rounded-2xl p-7 border border-gray-100 shadow-sm block">
                     <div class="glyph w-14 h-14 rounded-xl bg-orange-50 text-orange-700 flex items-center justify-center mb-5"><i class="fas fa-temperature-arrow-up text-2xl"></i></div>
                     <h3 class="font-display text-2xl font-black ink-text mb-2">热水器</h3>
-                    <div class="flex gap-2 mb-4"><span class="opt-pill">储水式</span><span class="opt-pill">太阳能</span><span class="opt-pill">空气能</span></div>
+                    <div class="flex gap-2 mb-4 flex-wrap"><span class="opt-pill">储水式&nbsp;<strong class="text-primary">¥150 起</strong></span><span class="opt-pill">太阳能&nbsp;<strong class="text-primary">¥20/根 起</strong></span><span class="opt-pill">空气能&nbsp;<strong class="text-primary">¥3/升 起</strong></span></div>
                     <p class="text-sm text-gray-600 leading-relaxed">清水垢、提升加热效率、延长寿命。</p>
                 </a>
                 <a href="#fridge" class="bento bg-white rounded-2xl p-7 border border-gray-100 shadow-sm block">
                     <div class="glyph w-14 h-14 rounded-xl bg-green-50 text-green-700 flex items-center justify-center mb-5"><i class="fas fa-box text-2xl"></i></div>
                     <h3 class="font-display text-2xl font-black ink-text mb-2">冰箱</h3>
-                    <div class="flex gap-2 mb-4"><span class="opt-pill">单门</span><span class="opt-pill">双开门</span><span class="opt-pill">十字门</span></div>
+                    <div class="flex gap-2 mb-4 flex-wrap"><span class="opt-pill">普通&nbsp;<strong class="text-primary">¥80 起</strong></span><span class="opt-pill">对开门&nbsp;<strong class="text-primary">¥180 起</strong></span><span class="opt-pill">十字门 议价</span></div>
                     <p class="text-sm text-gray-600 leading-relaxed">深度清洁全内胆，除异味与细菌。</p>
                 </a>
                 <a href="#floor" class="bento bg-white rounded-2xl p-7 border border-gray-100 shadow-sm block">
                     <div class="glyph w-14 h-14 rounded-xl bg-red-50 text-red-700 flex items-center justify-center mb-5"><i class="fas fa-fire text-2xl"></i></div>
                     <h3 class="font-display text-2xl font-black ink-text mb-2">地暖</h3>
-                    <div class="flex gap-2 mb-4"><span class="opt-pill">脉冲清洗</span><span class="opt-pill">按回路计费</span></div>
+                    <div class="flex gap-2 mb-4 flex-wrap"><span class="opt-pill">脉冲清洗</span><span class="opt-pill"><strong class="text-primary">¥50/组 起</strong></span></div>
                     <p class="text-sm text-gray-600 leading-relaxed">脉冲清洗地暖管路，恢复供热效率。</p>
                 </a>
             </div>
@@ -206,7 +206,12 @@
             <div id="hood" class="grid grid-cols-1 lg:grid-cols-12 gap-8" data-aos="fade-up">
                 <div class="lg:col-span-3">
                     <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">01 / HOOD</div>
-                    <h3 class="font-display text-3xl font-black ink-text">油烟机清洗</h3>
+                    <h3 class="font-display text-3xl font-black ink-text mb-5">油烟机清洗</h3>
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 text-sm">
+                        <div class="text-xs tracking-widest text-gray-500 font-semibold mb-2">参考报价</div>
+                        <div class="flex justify-between items-baseline py-1.5 border-b border-blue-100/60"><span class="text-gray-700">单轮</span><span class="font-display font-black text-primary">¥150 起</span></div>
+                        <div class="flex justify-between items-baseline py-1.5"><span class="text-gray-700">双轮</span><span class="font-display font-black text-primary">¥200 起</span></div>
+                    </div>
                 </div>
                 <div class="lg:col-span-9 text-gray-600 leading-relaxed">
                     <p class="mb-3">用了 1 年以上的油烟机，风轮上的油垢会让抽风量打七折。我们的清洗流程：</p>
@@ -225,7 +230,12 @@
             <div id="ac" class="grid grid-cols-1 lg:grid-cols-12 gap-8" data-aos="fade-up">
                 <div class="lg:col-span-3">
                     <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">02 / AC</div>
-                    <h3 class="font-display text-3xl font-black ink-text">空调清洗</h3>
+                    <h3 class="font-display text-3xl font-black ink-text mb-5">空调清洗</h3>
+                    <div class="bg-cyan-50 border border-cyan-100 rounded-xl p-4 text-sm">
+                        <div class="text-xs tracking-widest text-gray-500 font-semibold mb-2">参考报价</div>
+                        <div class="flex justify-between items-baseline py-1.5 border-b border-cyan-100/60"><span class="text-gray-700">挂机</span><span class="font-display font-black text-cyan-700">¥100 起</span></div>
+                        <div class="flex justify-between items-baseline py-1.5"><span class="text-gray-700">柜机</span><span class="font-display font-black text-cyan-700">¥150 起</span></div>
+                    </div>
                 </div>
                 <div class="lg:col-span-9 text-gray-600 leading-relaxed">
                     <p class="mb-3">空调蒸发器是霉菌、灰尘、细菌温床，长期不洗会导致出风口异味、过敏咳嗽、制冷变弱。流程：</p>
@@ -244,7 +254,12 @@
             <div id="washer" class="grid grid-cols-1 lg:grid-cols-12 gap-8" data-aos="fade-up">
                 <div class="lg:col-span-3">
                     <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">03 / WASHER</div>
-                    <h3 class="font-display text-3xl font-black ink-text">洗衣机清洗</h3>
+                    <h3 class="font-display text-3xl font-black ink-text mb-5">洗衣机清洗</h3>
+                    <div class="bg-purple-50 border border-purple-100 rounded-xl p-4 text-sm">
+                        <div class="text-xs tracking-widest text-gray-500 font-semibold mb-2">参考报价</div>
+                        <div class="flex justify-between items-baseline py-1.5 border-b border-purple-100/60"><span class="text-gray-700">滚筒免拆洗</span><span class="font-display font-black text-purple-700">¥150 起</span></div>
+                        <div class="flex justify-between items-baseline py-1.5"><span class="text-gray-700">波轮</span><span class="font-display font-black text-purple-700">¥200 起</span></div>
+                    </div>
                 </div>
                 <div class="lg:col-span-9 text-gray-600 leading-relaxed">
                     <p class="mb-3">洗衣机内桶夹层是细菌温床，洗衣服越洗越脏。两种方案：</p>
@@ -261,7 +276,13 @@
             <div id="heater" class="grid grid-cols-1 lg:grid-cols-12 gap-8" data-aos="fade-up">
                 <div class="lg:col-span-3">
                     <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">04 / HEATER</div>
-                    <h3 class="font-display text-3xl font-black ink-text">热水器清洗</h3>
+                    <h3 class="font-display text-3xl font-black ink-text mb-5">热水器清洗</h3>
+                    <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-sm">
+                        <div class="text-xs tracking-widest text-gray-500 font-semibold mb-2">参考报价</div>
+                        <div class="flex justify-between items-baseline py-1.5 border-b border-orange-100/60"><span class="text-gray-700">储水式</span><span class="font-display font-black text-orange-700">¥150 起</span></div>
+                        <div class="flex justify-between items-baseline py-1.5 border-b border-orange-100/60"><span class="text-gray-700">太阳能</span><span class="font-display font-black text-orange-700">¥20/根 起</span></div>
+                        <div class="flex justify-between items-baseline py-1.5"><span class="text-gray-700">空气能</span><span class="font-display font-black text-orange-700">¥3/升 起</span></div>
+                    </div>
                 </div>
                 <div class="lg:col-span-9 text-gray-600 leading-relaxed">
                     <p class="mb-3">水垢是热水器最大的隐形杀手：耗电、出水量小、寿命缩短。覆盖三种主流形式：</p>
@@ -279,7 +300,13 @@
             <div id="fridge" class="grid grid-cols-1 lg:grid-cols-12 gap-8" data-aos="fade-up">
                 <div class="lg:col-span-3">
                     <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">05 / FRIDGE</div>
-                    <h3 class="font-display text-3xl font-black ink-text">冰箱清洗</h3>
+                    <h3 class="font-display text-3xl font-black ink-text mb-5">冰箱清洗</h3>
+                    <div class="bg-green-50 border border-green-100 rounded-xl p-4 text-sm">
+                        <div class="text-xs tracking-widest text-gray-500 font-semibold mb-2">参考报价</div>
+                        <div class="flex justify-between items-baseline py-1.5 border-b border-green-100/60"><span class="text-gray-700">普通冰箱</span><span class="font-display font-black text-green-700">¥80 起</span></div>
+                        <div class="flex justify-between items-baseline py-1.5 border-b border-green-100/60"><span class="text-gray-700">对开门</span><span class="font-display font-black text-green-700">¥180 起</span></div>
+                        <div class="flex justify-between items-baseline py-1.5"><span class="text-gray-700">十字门</span><span class="font-display font-black text-green-700">议价</span></div>
+                    </div>
                 </div>
                 <div class="lg:col-span-9 text-gray-600 leading-relaxed">
                     <p class="mb-3">冰箱不只是擦内壁那么简单：密封条、排水孔、冷凝管、隔板都需要专业处理。</p>
@@ -297,7 +324,12 @@
             <div id="floor" class="grid grid-cols-1 lg:grid-cols-12 gap-8" data-aos="fade-up">
                 <div class="lg:col-span-3">
                     <div class="text-xs tracking-[0.3em] text-accent font-semibold mb-2">06 / FLOOR HEATING</div>
-                    <h3 class="font-display text-3xl font-black ink-text">地暖清洗</h3>
+                    <h3 class="font-display text-3xl font-black ink-text mb-5">地暖清洗</h3>
+                    <div class="bg-red-50 border border-red-100 rounded-xl p-4 text-sm">
+                        <div class="text-xs tracking-widest text-gray-500 font-semibold mb-2">参考报价</div>
+                        <div class="flex justify-between items-baseline py-1.5"><span class="text-gray-700">脉冲清洗</span><span class="font-display font-black text-red-700">¥50/组 起</span></div>
+                        <div class="text-xs text-gray-500 mt-2 leading-relaxed">按地暖回路（组）计费,具体组数上门检查后确认。</div>
+                    </div>
                 </div>
                 <div class="lg:col-span-9 text-gray-600 leading-relaxed">
                     <p class="mb-3">地暖管路 3 ~ 5 年清洗一次：内部生物粘膜会降低热传导效率，导致室温不达标、燃气费飙升。</p>
@@ -360,7 +392,7 @@
                             <div class="flex-shrink-0 bg-white p-3 rounded-full shadow-md text-primary"><i class="fas fa-map-marker-alt text-xl w-6 h-6 flex items-center justify-center"></i></div>
                             <div class="ml-4">
                                 <h4 class="text-base font-bold ink-text">公司地址</h4>
-                                <p class="text-gray-600">浙江省义乌市苏溪镇长府路 66 号 706 室</p>
+                                <p class="text-gray-600">浙江省义乌市苏溪镇长府路 78 号</p>
                             </div>
                         </div>
                     </div>
@@ -425,7 +457,7 @@
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><i class="fas fa-phone mr-2"></i> 153 5766 8957</li>
                         <li><i class="fas fa-envelope mr-2"></i> hongrui@126.com</li>
-                        <li class="leading-relaxed"><i class="fas fa-map-marker-alt mr-2"></i> 义乌苏溪镇长府路 66 号 706 室</li>
+                        <li class="leading-relaxed"><i class="fas fa-map-marker-alt mr-2"></i> 义乌苏溪镇长府路 78 号</li>
                     </ul>
                 </div>
             </div>
