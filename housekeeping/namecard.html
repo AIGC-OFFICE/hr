@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洪瑞家政 · 名片（刘洪星 / 李春宇 · 90×54mm 双面）</title>
+    <meta name="description" content="义乌洪瑞家政名片 · 标准 90×54mm 双面可打印。刘洪星 总经理 / 李春宇 业务经理。预约 153 5766 8957。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #FAF7F2;
+            --ink: #0B1220;
+            --blue: #1E40AF;
+            --blue-deep: #16317c;
+            --gold: #F59E0B;
+            --gold-deep: #9c6c12;
+            --muted: #6B7280;
+            --line: #E6DFD2;
+            --serif: "Noto Serif SC", Georgia, serif;
+            --sans: "Noto Sans SC", system-ui, -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { background: #2a2c31; font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+        .hint {
+            position: sticky; top: 0; z-index: 20; background: var(--ink); color: #fff;
+            font-size: 13px; text-align: center; padding: 10px 16px; line-height: 1.7;
+        }
+        .hint b { color: var(--gold); }
+
+        .stage { padding: 28px 14px 44px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+        .group { text-align: center; }
+        .group .lbl { color: #b7bcc6; font-size: 13px; letter-spacing: .2em; margin-bottom: 12px; }
+        .pair { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+
+        /* ---- standard China business card 90 x 54 mm ---- */
+        .card {
+            width: 90mm; height: 54mm; position: relative; overflow: hidden;
+            background: var(--paper); border-radius: 3mm;
+            box-shadow: 0 12px 26px -12px rgba(0,0,0,.55);
+        }
+        .card::before {
+            content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        /* ===== FRONT ===== */
+        .front { padding: 6mm 6.5mm; display: flex; flex-direction: column; }
+        .front::after { /* gold accent corner */
+            content: ""; position: absolute; top: 0; right: 0; width: 22mm; height: 22mm;
+            background: radial-gradient(circle at 100% 0%, rgba(245,158,11,.16), transparent 70%);
+        }
+        .front .brand { display: flex; align-items: center; gap: 3mm; position: relative; z-index: 1; }
+        .front .brand .logo { height: 7.4mm; width: auto; display: block; }
+        .front .brand .vd { width: 1px; height: 6mm; background: var(--line); }
+        .front .brand .bn { font-family: var(--serif); font-weight: 900; font-size: 12px; line-height: 1.15; }
+        .front .brand .be { font-size: 6px; letter-spacing: .26em; color: var(--gold-deep); text-transform: uppercase; margin-top: 1px; }
+
+        .front .who { margin-top: auto; position: relative; z-index: 1; }
+        .front .who .nm { font-family: var(--serif); font-weight: 900; font-size: 25px; letter-spacing: .04em; line-height: 1; }
+        .front .who .ti { display: inline-block; margin-top: 2.6mm; font-size: 10px; color: #fff; background: var(--blue);
+            padding: 1.4mm 3mm; border-radius: 999px; letter-spacing: .08em; }
+        .front .who .ti.gold { background: var(--gold); color: #3a2705; }
+        .front .tagline { margin-top: 2.4mm; font-size: 8.5px; color: var(--gold-deep); letter-spacing: .14em; position: relative; z-index: 1; }
+
+        /* ===== BACK ===== */
+        .back {
+            background: linear-gradient(155deg, var(--blue), var(--blue-deep)); color: #fff;
+            padding: 6mm 6.5mm; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .back::before { /* keep grain subtle on dark */ opacity: .12; }
+        .back .top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
+        .back .logo-w { background: #fff; border-radius: 2mm; padding: 1.6mm 2.4mm; }
+        .back .logo-w img { height: 6.4mm; width: auto; display: block; }
+        .back .slog { text-align: right; font-family: var(--serif); font-weight: 700; font-size: 11px; line-height: 1.35; }
+        .back .slog .g { color: var(--gold); }
+        .back .svc { position: relative; z-index: 1; font-size: 7.5px; color: #cfe0ff; letter-spacing: .04em; line-height: 1.6; }
+        .back .info { position: relative; z-index: 1; font-size: 9px; line-height: 1.75; }
+        .back .info .tel { font-family: var(--serif); font-weight: 900; font-size: 15px; letter-spacing: .02em; }
+        .back .info i { color: var(--gold); font-style: normal; width: 4mm; display: inline-block; }
+        .back .stamp { position: absolute; right: 6mm; bottom: 6mm; z-index: 1; font-size: 8px; color: #3a2705;
+            background: var(--gold); padding: 1mm 2.4mm; border-radius: 999px; font-weight: 700; }
+
+        @media print {
+            html, body { background: #fff; }
+            .hint { display: none !important; }
+            .stage { padding: 0; gap: 0; }
+            .group { page-break-after: always; }
+            .group .lbl { display: none; }
+            .pair { gap: 4mm; padding: 6mm; }
+            .card { box-shadow: none; border: 1px solid #eee; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hint">
+        标准名片 90×54mm · 正反面 · 印刷请加 3mm 出血与裁切线<br>
+        打印导 PDF：<b>Ctrl / ⌘ + P</b> → 边距「无」、勾选「背景图形」；交印刷店时说明「正反双面」
+    </div>
+
+    <div class="stage">
+
+        <!-- 刘洪星 -->
+        <div class="group">
+            <div class="lbl">刘洪星 · 正面 / 背面</div>
+            <div class="pair">
+                <!-- front -->
+                <div class="card front">
+                    <div class="brand">
+                        <img class="logo" src="../assets/images/logo.svg" alt="义乌市洪瑞劳务服务有限公司">
+                        <span class="vd"></span>
+                        <div>
+                            <div class="bn">洪瑞家政</div>
+                            <div class="be">Housekeeping</div>
+                        </div>
+                    </div>
+                    <div class="who">
+                        <div class="nm">刘洪星</div>
+                        <span class="ti gold">总经理</span>
+                    </div>
+                    <div class="tagline">义乌中高端家政 · 资产养护</div>
+                </div>
+                <!-- back -->
+                <div class="card back">
+                    <div class="top">
+                        <div class="logo-w"><img src="../assets/images/logo.svg" alt="洪瑞"></div>
+                        <div class="slog">把保洁升级为<br><span class="g">家庭资产养护</span></div>
+                    </div>
+                    <div class="svc">精细开荒 · 日常 / 深度保洁 · 整理收纳 · 新房除甲醛 · 软装养护 · 家电深度清洗</div>
+                    <div class="info">
+                        <div class="tel"><i>☎</i>153 5766 8957</div>
+                        <div><i>◎</i>义乌市苏溪镇长府路 78 号</div>
+                    </div>
+                    <div class="stamp">验收满意再付款</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 李春宇 -->
+        <div class="group">
+            <div class="lbl">李春宇 · 正面 / 背面</div>
+            <div class="pair">
+                <!-- front -->
+                <div class="card front">
+                    <div class="brand">
+                        <img class="logo" src="../assets/images/logo.svg" alt="义乌市洪瑞劳务服务有限公司">
+                        <span class="vd"></span>
+                        <div>
+                            <div class="bn">洪瑞家政</div>
+                            <div class="be">Housekeeping</div>
+                        </div>
+                    </div>
+                    <div class="who">
+                        <div class="nm">李春宇</div>
+                        <span class="ti">业务经理</span>
+                    </div>
+                    <div class="tagline">义乌中高端家政 · 资产养护</div>
+                </div>
+                <!-- back -->
+                <div class="card back">
+                    <div class="top">
+                        <div class="logo-w"><img src="../assets/images/logo.svg" alt="洪瑞"></div>
+                        <div class="slog">把保洁升级为<br><span class="g">家庭资产养护</span></div>
+                    </div>
+                    <div class="svc">精细开荒 · 日常 / 深度保洁 · 整理收纳 · 新房除甲醛 · 软装养护 · 家电深度清洗</div>
+                    <div class="info">
+                        <div class="tel"><i>☎</i>153 5766 8957</div>
+                        <div><i>◎</i>义乌市苏溪镇长府路 78 号</div>
+                    </div>
+                    <div class="stamp">验收满意再付款</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洪瑞家政 · 代金券（¥50 / ¥100 · 可打印）</title>
+    <meta name="description" content="义乌洪瑞家政代金券 · ¥50（满300可用）/ ¥100（满600可用），自领取起 6 个月有效。预约 153 5766 8957。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #FAF7F2;
+            --ink: #0B1220;
+            --blue: #1E40AF;
+            --blue-deep: #16317c;
+            --gold: #F59E0B;
+            --gold-deep: #9c6c12;
+            --muted: #6B7280;
+            --line: #E6DFD2;
+            --serif: "Noto Serif SC", Georgia, serif;
+            --sans: "Noto Sans SC", system-ui, -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { background: #2a2c31; font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+        .hint {
+            position: sticky; top: 0; z-index: 20; background: var(--ink); color: #fff;
+            font-size: 13px; text-align: center; padding: 10px 16px; line-height: 1.7;
+        }
+        .hint b { color: var(--gold); }
+
+        .stage { padding: 30px 14px 46px; display: flex; flex-direction: column; align-items: center; gap: 26px; }
+
+        /* ---- voucher ticket 180 x 76 mm ---- */
+        .ticket {
+            width: 180mm; height: 76mm; position: relative; display: flex; overflow: hidden;
+            border-radius: 4mm; box-shadow: 0 16px 34px -16px rgba(0,0,0,.6);
+            color: #fff;
+        }
+        .ticket.t50  { background: linear-gradient(135deg, var(--blue), var(--blue-deep)); }
+        .ticket.t100 { background: linear-gradient(135deg, #12203f, #0b1730); }
+        .ticket::before {
+            content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
+            background-image:
+                radial-gradient(40% 80% at 100% 0%, rgba(245,158,11,.5), transparent 60%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* left: amount stub */
+        .stub {
+            width: 64mm; flex-shrink: 0; position: relative; z-index: 1;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 6mm; text-align: center;
+        }
+        .stub .cur { font-family: var(--serif); font-weight: 700; font-size: 26px; color: var(--gold); vertical-align: top; }
+        .stub .amt { font-family: var(--serif); font-weight: 900; font-size: 96px; color: var(--gold); line-height: .9; letter-spacing: -.02em; }
+        .stub .cond { margin-top: 3mm; font-size: 12px; color: #e8eefc; letter-spacing: .04em; }
+        .stub .yuan { font-size: 13px; color: #cfe0ff; letter-spacing: .3em; margin-top: 1mm; }
+
+        /* perforation divider */
+        .perf { width: 0; border-left: 2px dashed rgba(255,255,255,.45); position: relative; z-index: 1; margin: 5mm 0; }
+        .perf::before, .perf::after {
+            content: ""; position: absolute; left: -5mm; width: 10mm; height: 10mm; border-radius: 50%;
+            background: #2a2c31;
+        }
+        .perf::before { top: -9mm; }
+        .perf::after { bottom: -9mm; }
+        @media print { .perf::before, .perf::after { background: #fff; } }
+
+        /* right: details */
+        .body { flex: 1; position: relative; z-index: 1; padding: 6mm 8mm; display: flex; flex-direction: column; }
+        .body .head { display: flex; align-items: center; gap: 3mm; }
+        .body .head .logo-w { background: #fff; border-radius: 2mm; padding: 1.4mm 2.2mm; }
+        .body .head .logo-w img { height: 6.6mm; width: auto; display: block; }
+        .body .head .ttl { font-family: var(--serif); font-weight: 900; font-size: 15px; }
+        .body .head .ttl .s { display: block; font-family: var(--sans); font-weight: 500; font-size: 8px; letter-spacing: .28em; color: var(--gold); margin-top: .5mm; }
+        .body .kind { margin-top: 3.5mm; font-family: var(--serif); font-weight: 900; font-size: 22px; }
+        .body .kind .g { color: var(--gold); }
+        .body .terms { margin-top: 2.5mm; font-size: 8.6px; color: #cdd6e6; line-height: 1.65; }
+        .body .terms b { color: #fff; }
+        .body .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; }
+        .body .foot .tel { font-size: 10px; color: #e8eefc; line-height: 1.6; }
+        .body .foot .tel .n { font-family: var(--serif); font-weight: 900; font-size: 16px; }
+        .body .foot .tel i { color: var(--gold); font-style: normal; margin-right: 3px; }
+        .body .foot .qr { background: #fff; padding: 4px; border-radius: 6px; }
+        .body .foot .qr img { width: 19mm; height: 19mm; display: block; object-fit: contain; }
+        .body .code { position: absolute; right: 8mm; top: 6mm; font-size: 8px; color: #9fb0cf; letter-spacing: .12em; }
+
+        @media print {
+            html, body { background: #fff; }
+            .hint { display: none !important; }
+            .stage { padding: 8mm; gap: 8mm; }
+            .ticket { box-shadow: none; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hint">
+        代金券 ¥50 / ¥100 · 180×76mm · 中缝虚线为撕裂/对折线<br>
+        打印导 PDF：<b>Ctrl / ⌘ + P</b> → 边距「无」、勾选「背景图形」 · 编号位「No.」可印刷流水号防伪
+    </div>
+
+    <div class="stage">
+
+        <!-- ¥50 -->
+        <div class="ticket t50">
+            <div class="stub">
+                <div><span class="cur">¥</span><span class="amt">50</span></div>
+                <div class="yuan">元 · 代金券</div>
+                <div class="cond">满 300 元可用</div>
+            </div>
+            <div class="perf"></div>
+            <div class="body">
+                <span class="code">No. ____________</span>
+                <div class="head">
+                    <div class="logo-w"><img src="../assets/images/logo.svg" alt="洪瑞"></div>
+                    <div class="ttl">洪瑞家政<span class="s">YIWU HONGRUI · HOUSEKEEPING</span></div>
+                </div>
+                <div class="kind">家政服务 <span class="g">¥50 抵用券</span></div>
+                <div class="terms">
+                    <b>适用：</b>洪瑞家政全项服务（开荒 / 保洁 / 收纳 / 除甲醛 / 软装 / 家电清洗）<br>
+                    <b>规则：</b>单笔订单满 ¥300 抵用 ¥50；每单限用 1 张，不与其他优惠叠加；不可兑现、不找零、不可转售<br>
+                    <b>有效期：</b>自领取之日起 6 个月内有效，过期作废<br>
+                    <b>使用：</b>预约或结算时出示本券核销 · 本券真伪及核销以洪瑞家政门店登记为准
+                </div>
+                <div class="foot">
+                    <div class="tel"><div><i>☎</i>预约核销</div><div class="n">153 5766 8957</div></div>
+                    <div class="qr"><img src="../assets/images/qrcode.png" alt="洪瑞家政业务微信二维码"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ¥100 -->
+        <div class="ticket t100">
+            <div class="stub">
+                <div><span class="cur">¥</span><span class="amt">100</span></div>
+                <div class="yuan">元 · 代金券</div>
+                <div class="cond">满 600 元可用</div>
+            </div>
+            <div class="perf"></div>
+            <div class="body">
+                <span class="code">No. ____________</span>
+                <div class="head">
+                    <div class="logo-w"><img src="../assets/images/logo.svg" alt="洪瑞"></div>
+                    <div class="ttl">洪瑞家政<span class="s">YIWU HONGRUI · HOUSEKEEPING</span></div>
+                </div>
+                <div class="kind">家政服务 <span class="g">¥100 抵用券</span></div>
+                <div class="terms">
+                    <b>适用：</b>洪瑞家政全项服务（开荒 / 保洁 / 收纳 / 除甲醛 / 软装 / 家电清洗）<br>
+                    <b>规则：</b>单笔订单满 ¥600 抵用 ¥100；每单限用 1 张，不与其他优惠叠加；不可兑现、不找零、不可转售<br>
+                    <b>有效期：</b>自领取之日起 6 个月内有效，过期作废<br>
+                    <b>使用：</b>预约或结算时出示本券核销 · 本券真伪及核销以洪瑞家政门店登记为准
+                </div>
+                <div class="foot">
+                    <div class="tel"><div><i>☎</i>预约核销</div><div class="n">153 5766 8957</div></div>
+                    <div class="qr"><img src="../assets/images/qrcode.png" alt="洪瑞家政业务微信二维码"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
