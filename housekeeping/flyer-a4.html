@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洪瑞家政 · 宣传单页（A4 打印版）</title>
+    <meta name="description" content="义乌洪瑞家政中高端服务宣传单页 · A4 可打印版。把保洁升级为家庭资产养护，验收满意再付款。预约 153 5766 8957。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #FAF7F2;
+            --ink: #0B1220;
+            --blue: #1E40AF;
+            --blue-deep: #16317c;
+            --gold: #F59E0B;
+            --gold-deep: #9c6c12;
+            --muted: #6B7280;
+            --line: #E6DFD2;
+            --serif: "Noto Serif SC", Georgia, serif;
+            --sans: "Noto Sans SC", system-ui, -apple-system, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            background: #e9e6df;
+            font-family: var(--sans);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---------- Screen hint bar (hidden on print) ---------- */
+        .hint {
+            position: sticky; top: 0; z-index: 20;
+            background: var(--ink); color: #fff;
+            font-size: 13px; text-align: center;
+            padding: 10px 16px; letter-spacing: .02em;
+        }
+        .hint b { color: var(--gold); }
+
+        /* ---------- The A4 sheet ---------- */
+        .sheet {
+            width: 210mm; min-height: 297mm; height: 297mm;
+            margin: 18px auto; position: relative; overflow: hidden;
+            background: var(--paper);
+            background-image:
+                radial-gradient(120% 80% at 100% 0%, rgba(30, 64, 175, .05), transparent 45%),
+                radial-gradient(110% 70% at 0% 100%, rgba(245, 158, 11, .06), transparent 42%);
+            box-shadow: 0 30px 60px -20px rgba(11, 18, 32, .35);
+            display: flex; flex-direction: column;
+        }
+        /* subtle paper grain */
+        .sheet::before {
+            content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+        }
+        .pad { padding: 12mm 14mm 0; position: relative; z-index: 1; }
+
+        /* ---------- Header ---------- */
+        .head { display: flex; justify-content: space-between; align-items: flex-start; }
+        .brand { display: flex; align-items: center; gap: 11px; }
+        .brand .mark {
+            width: 46px; height: 46px; border-radius: 11px;
+            background: linear-gradient(150deg, var(--blue), var(--blue-deep));
+            color: #fff; font-family: var(--serif); font-weight: 900; font-size: 26px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 6px 16px -6px rgba(30, 64, 175, .6);
+        }
+        .brand .bn { font-family: var(--serif); font-weight: 900; font-size: 19px; letter-spacing: .02em; line-height: 1.1; }
+        .brand .be { font-size: 9.5px; letter-spacing: .34em; color: var(--gold-deep); text-transform: uppercase; margin-top: 3px; }
+        .head .badge {
+            text-align: right; font-size: 10.5px; color: var(--muted); line-height: 1.7;
+        }
+        .head .badge b { color: var(--ink); }
+
+        .ruler { height: 2px; margin: 8mm 0 7mm; background: linear-gradient(to right, var(--gold), rgba(245,158,11,.15) 70%, transparent); position: relative; }
+        .ruler::after { content: "❖"; position: absolute; right: 0; top: -10px; color: var(--gold); font-size: 14px; }
+
+        /* ---------- Hero ---------- */
+        .kicker { font-size: 11px; letter-spacing: .42em; color: var(--gold-deep); text-transform: uppercase; margin-bottom: 9px; }
+        .h1 { font-family: var(--serif); font-weight: 900; font-size: 43px; line-height: 1.08; letter-spacing: -.01em; }
+        .h1 .b { color: var(--blue); }
+        .h1 .g { color: var(--gold); }
+        .lead { margin-top: 11px; font-size: 13.5px; color: #374151; line-height: 1.7; max-width: 150mm; }
+        .lead b { color: var(--ink); }
+        .stamp {
+            display: inline-flex; align-items: center; gap: 7px; margin-top: 12px;
+            border: 1.5px solid var(--gold); color: var(--gold-deep);
+            font-weight: 700; font-size: 13px; padding: 6px 14px; border-radius: 999px;
+            background: rgba(245, 158, 11, .07);
+        }
+        .stamp::before { content: "✓"; font-weight: 900; }
+
+        /* ---------- Service menu ---------- */
+        .sec-label { display: flex; align-items: center; gap: 10px; margin: 6.5mm 0 4mm; }
+        .sec-label .t { font-family: var(--serif); font-weight: 900; font-size: 17px; white-space: nowrap; }
+        .sec-label .ln { flex: 1; height: 1px; background: var(--line); }
+        .sec-label .en { font-size: 9.5px; letter-spacing: .3em; color: var(--muted); text-transform: uppercase; }
+
+        .menu { display: flex; flex-direction: column; gap: 2.9mm; }
+        .item { }
+        .item .row { display: flex; align-items: baseline; gap: 8px; }
+        .item .name { font-family: var(--serif); font-weight: 700; font-size: 16px; color: var(--ink); white-space: nowrap; }
+        .item .dots { flex: 1; border-bottom: 1.5px dotted #cdbf9f; transform: translateY(-4px); }
+        .item .price { font-family: var(--serif); font-weight: 900; font-size: 19px; color: var(--blue); white-space: nowrap; }
+        .item .price .u { font-family: var(--sans); font-weight: 500; font-size: 11px; color: var(--muted); margin-left: 2px; }
+        .item .desc { font-size: 11px; color: var(--muted); margin-top: 2.5px; line-height: 1.5; }
+        .item .desc .hi { color: var(--gold-deep); font-weight: 700; }
+
+        /* ---------- Promises ---------- */
+        .promises { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 6mm; }
+        .promise {
+            border: 1px solid var(--line); border-top: 2px solid var(--gold);
+            background: rgba(255, 255, 255, .55);
+            padding: 4mm 3.5mm; border-radius: 3px; text-align: center;
+        }
+        .promise .ic { color: var(--gold); font-size: 17px; margin-bottom: 5px; font-weight: 900; }
+        .promise .pt { font-weight: 700; font-size: 12px; line-height: 1.45; }
+        .promise .ps { font-size: 9.5px; color: var(--muted); margin-top: 3px; line-height: 1.4; }
+
+        .clients { margin-top: 6mm; font-size: 11.5px; color: #374151; text-align: center; }
+        .clients .lbl { color: var(--gold-deep); font-weight: 700; letter-spacing: .1em; }
+        .clients .sep { color: var(--gold); margin: 0 7px; }
+
+        /* ---------- Footer (contact) ---------- */
+        .foot {
+            margin-top: auto; position: relative; z-index: 1;
+            background: linear-gradient(135deg, var(--ink), #131c30);
+            color: #fff; padding: 8mm 14mm; display: flex; gap: 9mm; align-items: center;
+        }
+        .foot .left { flex: 1; }
+        .foot .tel-lbl { font-size: 11px; letter-spacing: .3em; color: var(--gold); text-transform: uppercase; margin-bottom: 3px; }
+        .foot .tel { font-family: var(--serif); font-weight: 900; font-size: 38px; letter-spacing: .01em; line-height: 1; }
+        .foot .info { margin-top: 11px; font-size: 11.5px; color: #c7cdd9; line-height: 1.9; }
+        .foot .info i { color: var(--gold); width: 15px; display: inline-block; font-style: normal; }
+        .foot .reg { margin-top: 9px; font-size: 10px; color: #9aa3b4; letter-spacing: .02em; }
+        .foot .qr { text-align: center; flex-shrink: 0; }
+        .foot .qr .box { background: #fff; padding: 7px; border-radius: 8px; }
+        .foot .qr img { width: 31mm; height: 31mm; display: block; object-fit: contain; }
+        .foot .qr .cap { font-size: 10.5px; color: #c7cdd9; margin-top: 6px; }
+        .foot .qr .cap b { color: var(--gold); }
+
+        /* ---------- Print ---------- */
+        @page { size: A4 portrait; margin: 0; }
+        @media print {
+            html, body { background: #fff; }
+            .hint { display: none !important; }
+            .sheet { margin: 0; box-shadow: none; width: 210mm; height: 297mm; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hint">A4 打印版 · 按 <b>Ctrl / ⌘ + P</b> → 目标选「另存为 PDF」、边距「无」、勾选「背景图形」即可导出单页 PDF</div>
+
+    <div class="sheet">
+        <div class="pad">
+            <!-- Header -->
+            <div class="head">
+                <div class="brand">
+                    <div class="mark">洪</div>
+                    <div>
+                        <div class="bn">洪瑞家政</div>
+                        <div class="be">Yiwu Hongrui · Housekeeping</div>
+                    </div>
+                </div>
+                <div class="badge">
+                    <b>2020 年正规注册</b> · 营业执照齐全<br>
+                    义乌全城上门 · 周一至周日 08:00–20:00
+                </div>
+            </div>
+
+            <div class="ruler"></div>
+
+            <!-- Hero -->
+            <div class="kicker">义乌中高端家政 · 资产养护</div>
+            <h1 class="h1">把保洁升级为<br><span class="g">家庭资产养护</span></h1>
+            <p class="lead">
+                为<b>别墅、大平层与高要求家庭</b>提供资产级清洁与养护。以工业级设备与 PH 中性养护剂，
+                为进口大理石、定制实木、艺术涂料提供<b>防护性清洁</b>——把每一次上门，做成对家庭资产的保值投资。
+            </p>
+            <div class="stamp">验收满意再付款 · 透明报价不加价</div>
+
+            <!-- Service menu -->
+            <div class="sec-label">
+                <span class="t">服务与报价</span>
+                <span class="ln"></span>
+                <span class="en">Services &amp; Pricing</span>
+            </div>
+
+            <div class="menu">
+                <div class="item">
+                    <div class="row"><span class="name">精细开荒保洁</span><span class="dots"></span><span class="price">¥12–22<span class="u">/㎡ 起</span></span></div>
+                    <div class="desc">50㎡内 ¥550 起 / 100㎡内 ¥1600 起 · <span class="hi">高阶建材防护性清洁</span>、玻璃强光无水印、精密轨道与吊顶龙骨吸尘</div>
+                </div>
+                <div class="item">
+                    <div class="row"><span class="name">日常 / 深度保洁</span><span class="dots"></span><span class="price">¥45–70<span class="u">/时 起</span></span></div>
+                    <div class="desc">高保有率专业人才、无二次返工 · 深度保洁按户型与材质 <span class="hi">上门定制核价</span></div>
+                </div>
+                <div class="item">
+                    <div class="row"><span class="name">整理收纳</span><span class="dots"></span><span class="price">¥150<span class="u">/时·人</span></span></div>
+                    <div class="desc">持证收纳师空间诊断、按生活动线规划 · <span class="hi">别墅定制收纳套餐 ¥12800 起</span></div>
+                </div>
+                <div class="item">
+                    <div class="row"><span class="name">新房除甲醛</span><span class="dots"></span><span class="price">检测¥200起 · 治理¥18–30<span class="u">/㎡</span></span></div>
+                    <div class="desc">熏蒸解离 + 多重喷涂闭环工艺 · <span class="hi">气相色谱等专业仪器多点检测</span>、两次以上上门复检</div>
+                </div>
+                <div class="item">
+                    <div class="row"><span class="name">软装养护</span><span class="dots"></span><span class="price">沙发¥60–120<span class="u">/座 · 窗帘¥25/㎡</span></span></div>
+                    <div class="desc">布艺蒸汽高温抽吸除螨 / 真皮手工去污 + 滋养乳锁色 · 窗帘<span class="hi">含拆装</span> · 实木地板油精护理</div>
+                </div>
+                <div class="item">
+                    <div class="row"><span class="name">家电深度清洗</span><span class="dots"></span><span class="price">分项报价</span></div>
+                    <div class="desc">油烟机 / 空调 / 洗衣机 / 热水器 / 冰箱 / 地暖 · 专业拆装、深度除菌、不破坏原厂保修</div>
+                </div>
+            </div>
+
+            <!-- Promises -->
+            <div class="promises">
+                <div class="promise"><div class="ic">✓</div><div class="pt">验收满意再付款</div><div class="ps">逐项验收后付款</div></div>
+                <div class="promise"><div class="ic">◇</div><div class="pt">玻璃双面无渍</div><div class="ps">强光无水印无划痕</div></div>
+                <div class="promise"><div class="ic">⚗</div><div class="pt">皮革 PH 检测</div><div class="ps">酸碱中性无残留</div></div>
+                <div class="promise"><div class="ic">★</div><div class="pt">持证匠人</div><div class="ps">防护性清洁</div></div>
+            </div>
+
+            <div class="clients">
+                <span class="lbl">专为高要求家庭</span><span class="sep">·</span>别墅 / 大平层业主<span class="sep">·</span>私营企业主<span class="sep">·</span>电商直播团队<span class="sep">·</span>外籍贸易商
+            </div>
+        </div>
+
+        <!-- Footer / contact -->
+        <div class="foot">
+            <div class="left">
+                <div class="tel-lbl">预约热线 · Booking</div>
+                <div class="tel">153&nbsp;5766&nbsp;8957</div>
+                <div class="info">
+                    <div><i>⌘</i>微信扫码 → 发户型图 / 现场照片，1 小时内回报价</div>
+                    <div><i>◎</i>浙江省义乌市苏溪镇长府路 78 号</div>
+                    <div><i>◷</i>周一至周日 08:00–20:00（节假日不休）</div>
+                </div>
+                <div class="reg">义乌市洪瑞劳务服务有限公司 · 2020 年正规注册 · 劳务派遣 + 家政服务双业务条线 · 合规可追溯</div>
+            </div>
+            <div class="qr">
+                <div class="box"><img src="../assets/images/qrcode.png" alt="洪瑞家政业务微信二维码"></div>
+                <div class="cap"><b>扫码</b>加微信<br>1 对 1 定制报价</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
