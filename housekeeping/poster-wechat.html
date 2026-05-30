@@ -26,7 +26,8 @@
 
         .viewport {
             position: fixed; inset: 0; background: #15161a;
-            display: flex; align-items: center; justify-content: center; overflow: auto;
+            display: flex; align-items: flex-start; justify-content: center; overflow: auto;
+            padding-top: 46px;
         }
         .hint {
             position: fixed; top: 0; left: 0; right: 0; z-index: 30;
@@ -35,14 +36,14 @@
         }
         .hint b { color: var(--gold); }
 
-        /* ---------- 1080 x 1920 poster ---------- */
+        /* ---------- 1080 x 1920 poster (auto-grows so the bottom is never clipped) ---------- */
+        .scaler { flex: 0 0 auto; }
         .poster {
-            width: 1080px; height: 1920px; flex: 0 0 auto;
-            transform-origin: center center;
+            width: 1080px; min-height: 1920px; transform-origin: top center;
             background: var(--paper);
             background-image:
-                radial-gradient(80% 50% at 100% -5%, rgba(30, 64, 175, .12), transparent 55%),
-                radial-gradient(70% 45% at -10% 105%, rgba(245, 158, 11, .14), transparent 50%);
+                radial-gradient(80% 46% at 100% -4%, rgba(30, 64, 175, .12), transparent 55%),
+                radial-gradient(70% 42% at -10% 104%, rgba(245, 158, 11, .14), transparent 50%);
             font-family: var(--sans); color: var(--ink); position: relative; overflow: hidden;
             display: flex; flex-direction: column;
         }
@@ -50,76 +51,77 @@
             content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .55; mix-blend-mode: multiply;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
         }
-        .inner { position: relative; z-index: 1; padding: 56px 84px 0; flex: 1; display: flex; flex-direction: column; }
+        .inner { position: relative; z-index: 1; padding: 50px 80px 0; flex: 1 0 auto; display: flex; flex-direction: column; }
 
         /* header */
         .top { display: flex; justify-content: space-between; align-items: center; }
-        .brand { display: flex; align-items: center; gap: 26px; }
-        .brand .logo { height: 96px; width: auto; display: block; }
-        .brand .vdiv { width: 2px; height: 70px; background: var(--line); }
-        .brand .tag .t1 { font-family: var(--serif); font-weight: 900; font-size: 34px; line-height: 1.1; }
-        .brand .tag .t2 { font-size: 16px; letter-spacing: .3em; color: var(--gold-deep); text-transform: uppercase; margin-top: 5px; }
-        .top .reg { text-align: right; font-size: 19px; color: var(--muted); line-height: 1.6; }
+        .brand { display: flex; align-items: center; gap: 24px; }
+        .brand .logo { height: 88px; width: auto; display: block; }
+        .brand .vdiv { width: 2px; height: 64px; background: var(--line); }
+        .brand .tag .t1 { font-family: var(--serif); font-weight: 900; font-size: 32px; line-height: 1.1; }
+        .brand .tag .t2 { font-size: 15px; letter-spacing: .3em; color: var(--gold-deep); text-transform: uppercase; margin-top: 5px; }
+        .top .reg { text-align: right; font-size: 18px; color: var(--muted); line-height: 1.6; }
         .top .reg b { color: var(--ink); }
 
-        .ruler { height: 4px; margin: 34px 0 30px; background: linear-gradient(to right, var(--gold), rgba(245,158,11,.12) 75%, transparent); }
+        .ruler { height: 4px; margin: 26px 0 24px; background: linear-gradient(to right, var(--gold), rgba(245,158,11,.12) 75%, transparent); }
 
         /* hero */
-        .kicker { font-size: 26px; letter-spacing: .5em; color: var(--gold-deep); text-transform: uppercase; }
-        .h1 { font-family: var(--serif); font-weight: 900; font-size: 92px; line-height: 1.07; letter-spacing: -.01em; margin-top: 20px; }
+        .kicker { font-size: 24px; letter-spacing: .48em; color: var(--gold-deep); text-transform: uppercase; }
+        .h1 { font-family: var(--serif); font-weight: 900; font-size: 84px; line-height: 1.07; letter-spacing: -.01em; margin-top: 18px; }
         .h1 .g { color: var(--gold); }
         .h1 .b { color: var(--blue); }
-        .lead { margin-top: 22px; font-size: 27px; line-height: 1.62; color: #374151; max-width: 880px; }
+        .lead { margin-top: 18px; font-size: 25px; line-height: 1.6; color: #374151; max-width: 900px; }
         .lead b { color: var(--ink); }
         .stamp {
-            display: inline-flex; align-items: center; gap: 14px; margin-top: 26px;
-            background: var(--gold); color: #3a2705; font-weight: 700; font-size: 32px;
-            padding: 16px 38px; border-radius: 999px; box-shadow: 0 14px 30px -12px rgba(245, 158, 11, .7);
+            display: inline-flex; align-items: center; gap: 13px; margin-top: 20px;
+            background: var(--gold); color: #3a2705; font-weight: 700; font-size: 30px;
+            padding: 14px 34px; border-radius: 999px; box-shadow: 0 14px 30px -12px rgba(245, 158, 11, .7);
         }
-        .stamp::before { content: "✓"; font-weight: 900; font-size: 34px; }
+        .stamp::before { content: "✓"; font-weight: 900; font-size: 32px; }
 
         /* services */
-        .sec { display: flex; align-items: center; gap: 24px; margin: 38px 0 22px; }
-        .sec .t { font-family: var(--serif); font-weight: 900; font-size: 38px; white-space: nowrap; }
+        .sec { display: flex; align-items: center; gap: 22px; margin: 30px 0 18px; }
+        .sec .t { font-family: var(--serif); font-weight: 900; font-size: 36px; white-space: nowrap; }
         .sec .ln { flex: 1; height: 2px; background: var(--line); }
-        .sec .en { font-size: 18px; letter-spacing: .3em; color: var(--muted); text-transform: uppercase; }
+        .sec .en { font-size: 17px; letter-spacing: .3em; color: var(--muted); text-transform: uppercase; }
 
-        .menu { display: flex; flex-direction: column; gap: 19px; }
-        .item .row { display: flex; align-items: baseline; gap: 18px; }
-        .item .name { font-family: var(--serif); font-weight: 700; font-size: 39px; white-space: nowrap; }
+        .menu { display: flex; flex-direction: column; gap: 16px; }
+        .item .row { display: flex; align-items: baseline; gap: 16px; }
+        .item .name { font-family: var(--serif); font-weight: 700; font-size: 37px; white-space: nowrap; }
         .item .dots { flex: 1; border-bottom: 3px dotted #cdbf9f; transform: translateY(-9px); }
-        .item .price { font-family: var(--serif); font-weight: 900; font-size: 44px; color: var(--blue); white-space: nowrap; }
-        .item .price .u { font-family: var(--sans); font-weight: 500; font-size: 23px; color: var(--muted); margin-left: 5px; }
-        .item .desc { font-size: 22px; color: var(--muted); margin-top: 5px; line-height: 1.45; }
+        .item .price { font-family: var(--serif); font-weight: 900; font-size: 42px; color: var(--blue); white-space: nowrap; }
+        .item .price .u { font-family: var(--sans); font-weight: 500; font-size: 22px; color: var(--muted); margin-left: 5px; }
+        .item .desc { font-size: 21px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
         .item .desc .hi { color: var(--gold-deep); font-weight: 700; }
 
         /* promises */
-        .promises { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
-        .promise { border: 2px solid var(--line); border-top: 5px solid var(--gold); border-radius: 8px; padding: 22px 12px; text-align: center; background: rgba(255,255,255,.55); }
-        .promise .ic { color: var(--gold); font-size: 40px; font-weight: 900; }
-        .promise .pt { font-weight: 700; font-size: 25px; margin-top: 8px; line-height: 1.32; }
+        .promises { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 26px; }
+        .promise { border: 2px solid var(--line); border-top: 5px solid var(--gold); border-radius: 8px; padding: 18px 10px; text-align: center; background: rgba(255,255,255,.55); }
+        .promise .ic { color: var(--gold); font-size: 36px; font-weight: 900; }
+        .promise .pt { font-weight: 700; font-size: 24px; margin-top: 7px; line-height: 1.3; }
 
         /* footer CTA */
         .cta {
-            position: relative; z-index: 1; margin-top: 30px;
+            position: relative; z-index: 1; margin-top: 28px;
             background: linear-gradient(135deg, var(--ink), #131c30); color: #fff;
-            padding: 50px 84px; display: flex; align-items: center; gap: 60px;
+            padding: 44px 80px; display: flex; align-items: center; gap: 56px;
         }
         .cta .l { flex: 1; }
-        .cta .tl { font-size: 24px; letter-spacing: .35em; color: var(--gold); text-transform: uppercase; margin-bottom: 10px; }
-        .cta .tel { font-family: var(--serif); font-weight: 900; font-size: 80px; line-height: 1; letter-spacing: .01em; }
-        .cta .ad { margin-top: 24px; font-size: 24px; color: #c7cdd9; line-height: 1.75; }
+        .cta .tl { font-size: 22px; letter-spacing: .35em; color: var(--gold); text-transform: uppercase; margin-bottom: 9px; }
+        .cta .tel { font-family: var(--serif); font-weight: 900; font-size: 74px; line-height: 1; letter-spacing: .01em; }
+        .cta .ad { margin-top: 22px; font-size: 22px; color: #c7cdd9; line-height: 1.7; }
         .cta .ad i { color: var(--gold); font-style: normal; margin-right: 8px; }
         .cta .qr { text-align: center; flex-shrink: 0; }
-        .cta .qr .box { background: #fff; padding: 16px; border-radius: 16px; }
-        .cta .qr img { width: 250px; height: 250px; display: block; object-fit: contain; }
-        .cta .qr .cap { font-size: 23px; color: #c7cdd9; margin-top: 13px; }
+        .cta .qr .box { background: #fff; padding: 14px; border-radius: 14px; }
+        .cta .qr img { width: 228px; height: 228px; display: block; object-fit: contain; }
+        .cta .qr .cap { font-size: 22px; color: #c7cdd9; margin-top: 12px; }
         .cta .qr .cap b { color: var(--gold); }
 
         @media print {
             @page { size: 1080px 1920px; margin: 0; }
-            .viewport { position: static; background: #fff; display: block; }
+            .viewport { position: static; background: #fff; display: block; padding: 0; overflow: visible; }
             .hint { display: none !important; }
+            .scaler { transform: none !important; }
             .poster { transform: none !important; }
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         }
@@ -130,92 +132,103 @@
     <div class="hint">微信竖版海报 1080×1920 · 手机/浏览器打开后<b>截图</b>即可转发，或按 <b>Ctrl / ⌘ + P</b> 导出图片/PDF</div>
 
     <div class="viewport">
-        <div class="poster" id="poster">
-            <div class="inner">
-                <div class="top">
-                    <div class="brand">
-                        <img class="logo" src="../assets/images/logo.svg" alt="义乌市洪瑞劳务服务有限公司">
-                        <span class="vdiv"></span>
-                        <div class="tag">
-                            <div class="t1">家政服务</div>
-                            <div class="t2">Housekeeping</div>
+        <div class="scaler" id="scaler">
+            <div class="poster" id="poster">
+                <div class="inner">
+                    <div class="top">
+                        <div class="brand">
+                            <img class="logo" src="../assets/images/logo.svg" alt="义乌市洪瑞劳务服务有限公司">
+                            <span class="vdiv"></span>
+                            <div class="tag">
+                                <div class="t1">家政服务</div>
+                                <div class="t2">Housekeeping</div>
+                            </div>
+                        </div>
+                        <div class="reg"><b>2020 年正规注册</b><br>义乌全城上门</div>
+                    </div>
+
+                    <div class="ruler"></div>
+
+                    <div class="kicker">义乌中高端家政 · 资产养护</div>
+                    <h1 class="h1">把保洁升级为<br><span class="g">家庭资产养护</span></h1>
+                    <p class="lead">为<b>别墅、大平层与高要求家庭</b>提供资产级清洁与养护——以防护性清洁守护进口大理石、定制实木与艺术涂料。</p>
+                    <div class="stamp">验收满意再付款 · 透明报价不加价</div>
+
+                    <div class="sec"><span class="t">服务与报价</span><span class="ln"></span><span class="en">Services &amp; Pricing</span></div>
+
+                    <div class="menu">
+                        <div class="item">
+                            <div class="row"><span class="name">精细开荒保洁</span><span class="dots"></span><span class="price">¥12–22<span class="u">/㎡ 起</span></span></div>
+                            <div class="desc">50㎡内¥550起 / 100㎡内¥1600起 · <span class="hi">高阶建材防护性清洁</span></div>
+                        </div>
+                        <div class="item">
+                            <div class="row"><span class="name">日常 / 深度保洁</span><span class="dots"></span><span class="price">¥45–70<span class="u">/时 起</span></span></div>
+                            <div class="desc">高保有率专业人才 · 深度保洁上门定制核价</div>
+                        </div>
+                        <div class="item">
+                            <div class="row"><span class="name">整理收纳</span><span class="dots"></span><span class="price">¥150<span class="u">/时·人</span></span></div>
+                            <div class="desc">持证收纳师空间诊断 · <span class="hi">别墅定制套餐 ¥12800 起</span></div>
+                        </div>
+                        <div class="item">
+                            <div class="row"><span class="name">新房除甲醛</span><span class="dots"></span><span class="price">治理¥18–30<span class="u">/㎡</span></span></div>
+                            <div class="desc">检测¥200起 · 气相色谱仪多点检测、两次以上复检</div>
+                        </div>
+                        <div class="item">
+                            <div class="row"><span class="name">软装养护</span><span class="dots"></span><span class="price">沙发¥60–120<span class="u">/座</span></span></div>
+                            <div class="desc">布艺除螨 / 真皮去污锁色 · 窗帘¥25/㎡<span class="hi">含拆装</span> · 地板油精护理</div>
+                        </div>
+                        <div class="item">
+                            <div class="row"><span class="name">家电深度清洗</span><span class="dots"></span><span class="price">分项报价</span></div>
+                            <div class="desc">油烟机 / 空调 / 洗衣机 / 热水器 / 冰箱 / 地暖</div>
                         </div>
                     </div>
-                    <div class="reg"><b>2020 年正规注册</b><br>义乌全城上门</div>
-                </div>
 
-                <div class="ruler"></div>
-
-                <div class="kicker">义乌中高端家政 · 资产养护</div>
-                <h1 class="h1">把保洁升级为<br><span class="g">家庭资产养护</span></h1>
-                <p class="lead">为<b>别墅、大平层与高要求家庭</b>提供资产级清洁与养护——以防护性清洁守护进口大理石、定制实木与艺术涂料。</p>
-                <div class="stamp">验收满意再付款 · 透明报价不加价</div>
-
-                <div class="sec"><span class="t">服务与报价</span><span class="ln"></span><span class="en">Services &amp; Pricing</span></div>
-
-                <div class="menu">
-                    <div class="item">
-                        <div class="row"><span class="name">精细开荒保洁</span><span class="dots"></span><span class="price">¥12–22<span class="u">/㎡ 起</span></span></div>
-                        <div class="desc">50㎡内¥550起 / 100㎡内¥1600起 · <span class="hi">高阶建材防护性清洁</span></div>
-                    </div>
-                    <div class="item">
-                        <div class="row"><span class="name">日常 / 深度保洁</span><span class="dots"></span><span class="price">¥45–70<span class="u">/时 起</span></span></div>
-                        <div class="desc">高保有率专业人才 · 深度保洁上门定制核价</div>
-                    </div>
-                    <div class="item">
-                        <div class="row"><span class="name">整理收纳</span><span class="dots"></span><span class="price">¥150<span class="u">/时·人</span></span></div>
-                        <div class="desc">持证收纳师空间诊断 · <span class="hi">别墅定制套餐 ¥12800 起</span></div>
-                    </div>
-                    <div class="item">
-                        <div class="row"><span class="name">新房除甲醛</span><span class="dots"></span><span class="price">治理¥18–30<span class="u">/㎡</span></span></div>
-                        <div class="desc">检测¥200起 · 气相色谱仪多点检测、两次以上复检</div>
-                    </div>
-                    <div class="item">
-                        <div class="row"><span class="name">软装养护</span><span class="dots"></span><span class="price">沙发¥60–120<span class="u">/座</span></span></div>
-                        <div class="desc">布艺除螨 / 真皮去污锁色 · 窗帘¥25/㎡<span class="hi">含拆装</span> · 地板油精护理</div>
-                    </div>
-                    <div class="item">
-                        <div class="row"><span class="name">家电深度清洗</span><span class="dots"></span><span class="price">分项报价</span></div>
-                        <div class="desc">油烟机 / 空调 / 洗衣机 / 热水器 / 冰箱 / 地暖</div>
+                    <div class="promises">
+                        <div class="promise"><div class="ic">✓</div><div class="pt">验收满意<br>再付款</div></div>
+                        <div class="promise"><div class="ic">◇</div><div class="pt">玻璃强光<br>无划痕</div></div>
+                        <div class="promise"><div class="ic">⚗</div><div class="pt">皮革PH<br>中性检测</div></div>
+                        <div class="promise"><div class="ic">★</div><div class="pt">持证匠人<br>防护清洁</div></div>
                     </div>
                 </div>
 
-                <div class="promises">
-                    <div class="promise"><div class="ic">✓</div><div class="pt">验收满意<br>再付款</div></div>
-                    <div class="promise"><div class="ic">◇</div><div class="pt">玻璃强光<br>无划痕</div></div>
-                    <div class="promise"><div class="ic">⚗</div><div class="pt">皮革PH<br>中性检测</div></div>
-                    <div class="promise"><div class="ic">★</div><div class="pt">持证匠人<br>防护清洁</div></div>
-                </div>
-            </div>
-
-            <div class="cta">
-                <div class="l">
-                    <div class="tl">预约热线 · Booking</div>
-                    <div class="tel">153 5766 8957</div>
-                    <div class="ad">
-                        <div><i>◎</i>浙江省义乌市苏溪镇长府路 78 号</div>
-                        <div><i>◷</i>周一至周日 08:00–20:00 · 节假日不休</div>
+                <div class="cta">
+                    <div class="l">
+                        <div class="tl">预约热线 · Booking</div>
+                        <div class="tel">153 5766 8957</div>
+                        <div class="ad">
+                            <div><i>◎</i>浙江省义乌市苏溪镇长府路 78 号</div>
+                            <div><i>◷</i>周一至周日 08:00–20:00 · 节假日不休</div>
+                        </div>
                     </div>
-                </div>
-                <div class="qr">
-                    <div class="box"><img src="../assets/images/qrcode.png" alt="洪瑞家政业务微信二维码"></div>
-                    <div class="cap"><b>扫码</b>加微信<br>1 对 1 定制报价</div>
+                    <div class="qr">
+                        <div class="box"><img src="../assets/images/qrcode.png" alt="洪瑞家政业务微信二维码"></div>
+                        <div class="cap"><b>扫码</b>加微信<br>1 对 1 定制报价</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Fit the fixed 1080x1920 poster into the viewport for on-screen preview.
-        // Screenshot/export keeps the crisp 1080x1920 design size.
+        // Robust preview scaling: fit the poster's ACTUAL rendered height into the
+        // viewport (works even if content grows past 1920), and re-run after the
+        // web fonts finish loading so nothing ends up below the fold.
         (function () {
+            var scaler = document.getElementById('scaler');
             var poster = document.getElementById('poster');
             function fit() {
-                var pad = 24, hint = 38;
-                var s = Math.min((window.innerWidth - pad) / 1080, (window.innerHeight - hint - pad) / 1920);
-                poster.style.transform = 'scale(' + Math.min(s, 1) + ')';
+                scaler.style.transform = 'none';
+                var w = poster.offsetWidth || 1080;
+                var h = poster.offsetHeight || 1920;
+                var avW = window.innerWidth - 24;
+                var avH = window.innerHeight - 46 - 24;
+                var s = Math.min(avW / w, avH / h, 1);
+                scaler.style.transform = 'scale(' + s + ')';
+                scaler.style.transformOrigin = 'top center';
             }
             window.addEventListener('resize', fit);
+            window.addEventListener('load', fit);
+            if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fit); }
             fit();
         })();
     </script>
